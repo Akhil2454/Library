@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<form action="search" method="post">
+    {% csrf_token %}
+
+    <label>Book Id :</label>
+    <input type="number" name="n1"><br><br>
+
+    <input type="submit" value="SEARCH">
+</form><br><br>
+<table border="1px">
+    <thead>
+    <th>BOOK ID</th>
+    <th>BOOK NAME</th>
+    <th>PRICE</th>
+    </thead>
+    <tr>
+        {% for i in data %}
+        <td>{{i.book_id}}</td>
+        <td>{{i.book_name}}</td>
+        <td>{{i.price}}</td>
+        {% endfor %}
+    </tr>
+</table>
+<br><br>
+<a href="dash">Dashboard</a>
+</body>
+</html>

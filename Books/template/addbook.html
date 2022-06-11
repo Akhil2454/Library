@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book</title>
+</head>
+<body>
+<form action="add" method="post">
+    {% csrf_token %}
+
+    <h2>Add Books</h2><br>
+
+     <label>Book Id :</label>
+    <input type="number" name="n1"><br><br>
+
+     <label>Book Name :</label>
+    <input type="text" name="n2"><br><br>
+
+     <label>Price :</label>
+    <input type="number" name="n3"><br><br>
+
+
+    <input type="submit" value="ADD">
+</form><br><br>
+{{b}}{{msg}}
+<a href="dash">Dashboard</a>
+</body>
+</html>

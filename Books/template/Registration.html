@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<form action="reg" method="post">
+    {% csrf_token %}
+
+    <h2>User Registration</h2><br>
+
+     <label>Name :</label>
+    <input type="text" name="n1"><br><br>
+
+     <label>Ph No :</label>
+    <input type="number" name="n2"><br><br>
+
+     <label>Username :</label>
+    <input type="text" name="n3"><br><br>
+
+     <label>Password :</label>
+    <input type="password" name="n4"><br><br>
+
+     <label>Confirm Password :</label>
+    <input type="password" name="n5"><br><br>
+
+    <input type="submit" value="Register">
+</form>
+{{msg}}<br><br>
+<a href="/">Login</a>
+
+
+</body>
+</html>

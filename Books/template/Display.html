@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+</head>
+<body>
+<table border="2px">
+    <th>BOOK ID</th>
+    <th>BOOK NAME</th>
+    <th>BOOK PRICE</th>
+    <th>delete</th>
+    {% for i in d %}
+    <tr>
+        <td>{{i.book_id}}</td>
+        <td>{{i.book_name}}</td>
+        <td>{{i.price}}</td>
+        <form action="delete" method="post">
+            {% csrf_token %}
+             <input type="number" name="n1" value="{{i.book_id}}" hidden>
+        <td><input type="submit" value="DELETE"></td>
+    </tr>
+  {% endfor %}
+</table><br>
+{{msg}}<br><br>
+<a href="dash">Dashboard</a>
+</body>
+</html>
